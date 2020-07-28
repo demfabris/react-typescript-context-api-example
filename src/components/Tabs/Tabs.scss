@@ -1,0 +1,38 @@
+// tabs
+
+.tabs {
+    list-style-type: none;
+
+    &__item {
+        &-btn {
+            display: flex;
+            height: 46px;
+            align-items: center;
+            flex-direction: row;
+            background: $sg;
+            @include ui-border($dir: none);
+            border-radius: 2px;
+            cursor: pointer;
+            color: $fg;
+            transition: 0.2s ease;
+            outline: none;
+
+            .material-icons {
+                margin-right: 5px;
+                color: $fg;
+            }
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+
+            &:active {
+                filter: brightness(0.9);
+            }
+        }
+
+        &-text {
+            font-weight: 400;
+        }
+    }
+}

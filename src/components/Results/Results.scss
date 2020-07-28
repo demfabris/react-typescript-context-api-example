@@ -1,0 +1,83 @@
+// Results.scss
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5em;
+    padding-bottom: 8em;
+
+    &-item {
+        display: flex;
+        position: relative;
+        border: 1px solid $fg-light;
+        width: 10em;
+        border-radius: 2px;
+        box-shadow: 0 1px 5px $bg-dark;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.75em 2em;
+        transition: 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 1px 6px $fg-light;
+            .material-icons {
+                display: block;
+            }
+        }
+
+        p {
+            font-size: 1.15em;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 0.5em;
+            cursor: default;
+
+            i {
+                font-size: 0.5em;
+                opacity: 0.3;
+            }
+        }
+
+        .material-icons {
+            font-size: 1.5em;
+            display: none;
+            color: $fg-light;
+        }
+
+        &__title {
+            color: $sg;
+        }
+
+        &__edit {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                .material-icons {
+                    color: orange;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        &__delete {
+            position: absolute;
+            top: 10px;
+            right: 2em;
+            background: none;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                .material-icons {
+                    color: tomato;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+// search bar
+
+.searchbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25em;
+
+    &__input {
+        height: 25px;
+        border-radius: 2px;
+        @include ui-border($dir: null);
+        padding: 10px;
+        font-size: 1.25em;
+        background: none;
+        color: $fg;
+        outline: none;
+        transition: 0.2s ease;
+
+        &::placeholder {
+            color: $fg-light;
+            font-size: 0.75em;
+        }
+
+        &:focus {
+            @include ui-border($dir: inset);
+        }
+    }
+}

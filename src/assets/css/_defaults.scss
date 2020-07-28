@@ -1,0 +1,26 @@
+:root {
+    --dark: #343a40;
+    --darker: #282828;
+    --light-blue: #089eae;
+    --white: #ffffff;
+    --crystal: rgba(255, 255, 255, 0.2);
+}
+
+$bg: var(--dark);
+$bg-dark: var(--darker);
+$fg: var(--white);
+$fg-light: var(--crystal);
+$sg: var(--light-blue);
+
+@mixin ui-border($dir) {
+    border: 1px solid $fg-light;
+    box-shadow: $dir 0 1px 5px $bg-dark;
+}
+
+body {
+    background: $bg;
+    color: $fg;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+}
