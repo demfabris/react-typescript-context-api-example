@@ -2,18 +2,18 @@ import { RequestInstanceT } from '../../../typedefs'
 
 type ActionT = (
     itemID: string,
-    action: 'delete' | 'add',
+    action: 'DELETE' | 'ADD',
     requestDispatcher: RequestInstanceT
 ) => void
 
-//IMPLEMENTAR DELETE E ADD
+//dispatch action
 
 export const handleAction: ActionT = (itemID, action, requestDispatcher) => {
-    console.log(itemID)
-    console.log(action)
-    console.log(requestDispatcher)
     requestDispatcher({
         url: `/cars/${itemID}`,
-        method: 'DELETE',
-    }).then((x) => console.log(x))
+        method: action,
+    }).then(() => {
+        alert('You just removed a car :(')
+        window.location.reload()
+    })
 }
