@@ -15,6 +15,8 @@ module.exports = {
             typedefs: path.resolve(__dirname, 'src/typedefs'),
             hooks: path.resolve(__dirname, 'src/hooks'),
             constants: path.resolve(__dirname, 'src/constants'),
+            store: path.resolve(__dirname, 'src/store'),
+            components: path.resolve(__dirname, 'src/components'),
         },
     },
     devtool: 'inline-source-map',

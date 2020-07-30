@@ -1,4 +1,4 @@
-import { ICarProps } from '../../../typedefs'
+import { ICarProps } from 'typedefs'
 import { ChangeEvent } from 'react'
 
 type State = {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal } from './Modal'
-import { IDialogProps } from '../../typedefs'
+import { IDialogProps } from 'typedefs'
 
 const Dialog: React.FC<IDialogProps> = (props) => {
     const {

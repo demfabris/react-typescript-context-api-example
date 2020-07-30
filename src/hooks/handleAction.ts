@@ -1,4 +1,4 @@
-import { RequestInstanceT, ICarProps } from '../typedefs'
+import { RequestInstanceT, ICarProps } from 'typedefs'
 
 type ActionT = (
     method: 'DELETE' | 'POST' | 'PUT',

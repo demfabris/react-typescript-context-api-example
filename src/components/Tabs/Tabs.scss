@@ -13,7 +13,7 @@
             background: $sg;
             @include ui-border($dir: none);
             border-radius: 2px;
-            width: 135px;
+            width: 145px;
             cursor: pointer;
             color: $fg;
             transition: 0.2s ease;
@@ -35,6 +35,24 @@
 
         &-text {
             font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .tabs {
+        padding: 0;
+        width: 100%;
+        &__item {
+            width: 100%;
+            &-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            &-text {
+                margin-left: 0;
+            }
         }
     }
 }

@@ -1,10 +1,8 @@
+import { Dialog } from 'components'
+import { handleAction, useRequest } from 'hooks'
 import React, { useState } from 'react'
-import { handleAction } from '../../../hooks'
-import { ICarProps, IDialogProps } from '../../../typedefs'
-import { useUIContext } from '../../../store'
-import { useRequest } from '../../../hooks'
-import { Dialog } from '../../../components'
-import { parseAge } from './fixes'
+import { useUIContext } from 'store'
+import { ICarProps, IDialogProps } from 'typedefs'
 
 const Item: React.FC<ICarProps | null> = ({
     _id,
@@ -30,7 +28,7 @@ const Item: React.FC<ICarProps | null> = ({
                                 title,
                                 brand,
                                 price,
-                                age: parseAge(age),
+                                age: age,
                             },
                         })
                         window.scrollTo({
@@ -65,7 +63,7 @@ const Item: React.FC<ICarProps | null> = ({
                 <p className="results-item__brand">
                     <i>brand.</i> {brand}
                 </p>
-                <p className="results-item__price">
+                <p title={price} className="results-item__price">
                     <i>price.</i>&nbsp;&nbsp;
                     {Number(price).toLocaleString('pt-br', {
                         style: 'currency',
@@ -73,8 +71,7 @@ const Item: React.FC<ICarProps | null> = ({
                     })}
                 </p>
                 <p className="results-item__age">
-                    <i>age.</i>&nbsp;&nbsp;&nbsp;{parseAge(age)}{' '}
-                    <b>years old</b>
+                    <i>age.</i>&nbsp;&nbsp;&nbsp;{age} <b>years old</b>
                 </p>
             </div>
             {dialog && <Dialog {...dialog} />}

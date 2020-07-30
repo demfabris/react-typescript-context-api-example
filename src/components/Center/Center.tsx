@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
-import { useRequest } from '../../hooks/' // shorten
-import { useDataContext, useLoadingContext } from '../../store'
-import { Loading } from '../Loading'
-
-/* import { Form } from '../Form' */
-import { Results } from '../Results'
+import { useRequest } from 'hooks' // shorten
+import { useDataContext, useLoadingContext } from 'store'
+import { Loading } from 'components/Loading'
+import { Results } from 'components/Results'
 
 const Center: React.FC = () => {
     const dispatchRequest = useRequest()

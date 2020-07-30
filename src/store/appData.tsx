@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { ICarProps } from '../typedefs'
+import { ICarProps } from 'typedefs'
 
 type State = {
     stale: ICarProps[] | undefined

@@ -1,4 +1,4 @@
-import { ICarProps } from './carprops'
+import { ICarProps } from 'typedefs'
 
 interface IRequestProps {
     url: string | null

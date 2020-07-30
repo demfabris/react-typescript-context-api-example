@@ -1,5 +1,5 @@
 import React from 'react'
-import { useUIContext, useDataContext } from '../../store'
+import { useUIContext, useDataContext } from 'store'
 import { handleSearch } from './hooks'
 
 const SearchBar: React.FC = () => {

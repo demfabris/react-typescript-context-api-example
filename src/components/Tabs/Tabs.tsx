@@ -1,5 +1,5 @@
 import React from 'react'
-import { useUIContext } from '../../store'
+import { useUIContext } from 'store'
 
 const Tabs: React.FC = () => {
     const [UIState, setUIState] = useUIContext()

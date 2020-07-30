@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useUIContext } from '../../store'
+import { useUIContext } from 'store'
 import { FormField } from './components'
-import { useRequest, handleAction } from '../../hooks'
+import { useRequest, handleAction } from 'hooks'
 import { ICarProps } from 'typedefs'
 
 const Form = () => {

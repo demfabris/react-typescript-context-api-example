@@ -1,12 +1,13 @@
-import { baseUrl } from '../constants/apiConfig'
-import { useLoadingContext } from '../store'
-import { RequestInstanceT } from '../typedefs'
+import { baseUrl } from 'constants/apiConfig'
+import { useLoadingContext } from 'store'
+import { RequestInstanceT } from 'typedefs'
 
 export const useRequest = () => {
     const [, setLoading] = useLoadingContext()
 
     const requestInstance: RequestInstanceT = async (requestProps) => {
         const { url } = requestProps
+        setLoading({ isLoading: true })
         try {
             const response = await fetch(baseUrl + url, requestProps)
             if (!response.ok) {

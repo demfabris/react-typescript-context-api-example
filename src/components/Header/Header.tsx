@@ -1,5 +1,5 @@
 import React from 'react'
-import { UIContext } from '../../store'
+import { UIContext } from 'store'
 
 const Header: React.FC = () => {
     return (
