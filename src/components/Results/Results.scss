@@ -29,12 +29,13 @@
         p {
             font-size: 1.15em;
             font-weight: 500;
+            line-height: 1.15em;
             text-transform: capitalize;
-            line-height: 0.5em;
             cursor: default;
 
             i {
                 font-size: 0.5em;
+                text-transform: lowercase;
                 opacity: 0.3;
             }
         }
@@ -47,6 +48,19 @@
 
         &__title {
             color: $sg;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        &__price {
+            font-weight: 300 !important;
+        }
+
+        &__age {
+            font-weight: 300 !important;
+            text-transform: lowercase !important;
         }
 
         &__edit {

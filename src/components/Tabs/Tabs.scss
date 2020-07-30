@@ -9,9 +9,11 @@
             height: 46px;
             align-items: center;
             flex-direction: row;
+            justify-content: space-around;
             background: $sg;
             @include ui-border($dir: none);
             border-radius: 2px;
+            width: 135px;
             cursor: pointer;
             color: $fg;
             transition: 0.2s ease;

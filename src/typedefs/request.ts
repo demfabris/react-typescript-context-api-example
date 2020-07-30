@@ -3,8 +3,8 @@ import { ICarProps } from './carprops'
 interface IRequestProps {
     url: string | null
     method: string
-    headers?: {}
-    data?: {}
+    headers?: any
+    body?: any
 }
 
 type Response = ICarProps[] | undefined

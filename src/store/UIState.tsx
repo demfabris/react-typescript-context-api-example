@@ -1,7 +1,11 @@
 import React, { createContext, useContext, useState } from 'react'
+import { ICarProps } from 'typedefs'
 
 type State = {
     name: string
+    previousName: string
+    form: boolean
+    edit?: ICarProps
 }
 
 type StateGetSet = [State, React.Dispatch<React.SetStateAction<State>>]
@@ -16,6 +20,8 @@ type ContextProviderProps = {
 
 const initialState: State = {
     name: 'list',
+    previousName: 'list',
+    form: false,
 }
 
 export const UIContext = createContext<StateGetSet | undefined>(undefined)

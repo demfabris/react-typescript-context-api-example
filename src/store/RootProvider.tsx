@@ -1,6 +1,6 @@
 import React from 'react'
 import { DataContextProvider } from './appData'
-import { UIContextProvider } from './sectionTitle'
+import { UIContextProvider } from './UIState'
 import { LoadingContextProvider } from './loadingState'
 
 type ProviderProps = {

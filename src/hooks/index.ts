@@ -1,1 +1,2 @@
-export { default as useRequest } from './useRequest'
+export { useRequest } from './useRequest'
+export { handleAction } from './handleAction'

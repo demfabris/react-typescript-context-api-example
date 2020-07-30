@@ -14,10 +14,7 @@ const Results: React.FC = () => {
                     _id={_id}
                     title={title}
                     brand={brand}
-                    price={Number(price).toLocaleString('pt-br', {
-                        style: 'currency',
-                        currency: 'BRL',
-                    })}
+                    price={price}
                     age={age}
                 />
             ))}

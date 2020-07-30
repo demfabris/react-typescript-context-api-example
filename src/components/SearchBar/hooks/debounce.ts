@@ -1,14 +1,27 @@
-type IDebounceFunc = (searchDiv: HTMLElement, resultsDiv: HTMLElement) => void
+import { ICarProps } from '../../../typedefs'
+import { ChangeEvent } from 'react'
 
-export const debounceSearch: IDebounceFunc = (searchDiv, resultsDiv) => {
-    setTimeout(() => fixUIOnDebounce(searchDiv, resultsDiv), 1500)
-
-    return void 0
+type State = {
+    stale: ICarProps[] | undefined
+    dynamic: ICarProps[] | undefined
 }
 
-export const fixUIOnDebounce: IDebounceFunc = (searchDiv, resultsDiv) => {
-    resultsDiv.style.display = 'flex'
-    searchDiv.style.boxShadow = 'none'
+type DebounceT = (
+    ev: ChangeEvent<HTMLInputElement>,
+    stale: ICarProps[] | undefined,
+    setData: (newValue: State) => void
+) => void
 
-    return void 0
+const handleSearch: DebounceT = (ev, stale, setData) => {
+    //parsing input query to lowercase to improve experience
+    const query = ev.target.value.toLowerCase()
+    const result = stale?.filter((item) => {
+        return (
+            item.title.toLowerCase().includes(query) ||
+            item.brand.toLowerCase().includes(query)
+        )
+    })
+    setData({ stale, dynamic: result })
 }
+
+export default handleSearch

@@ -11,6 +11,7 @@ const Main: React.FC = () => {
                 <components.SearchBar />
                 <components.Tabs />
             </div>
+            <components.Form />
             <components.Center />
         </section>
     )
